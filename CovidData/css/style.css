@@ -1,0 +1,165 @@
+:root {
+	--primary-font: "Segoe UI";
+	--primary-color: #0E0E0E;
+	--secondary-color: #ffffff;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    font-family: var(--primary-font);    
+    font-variant: small-caps;
+    font-size: 10px;
+    font-weight: 300 ;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+.map{
+    width: 600px;
+    height: 700px;
+    overflow: scroll;
+    margin-top: -50px;
+}
+svg{
+    width: 62rem;
+    height: 100%;
+    zoom: .9;
+}
+svg .land:hover{
+    transform: translateY(-8px);
+    fill: rgb(98, 226, 220);
+}
+.header{
+    margin-top: 20px;
+    width: 100%;
+    font-size: 3.8rem;
+}
+.State{
+    margin-top: -100px;
+    width: 350px;
+    padding-left: 80px; 
+}
+.india_data{
+    width: 20%;
+    height: 100%;
+}
+.district_dropdown{
+    width: 10.5rem;
+    height: 2rem;
+    background: transparent;
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+    margin-left: 95px;
+    color: var(--secondary-color);
+}
+.district_dropdown::-ms-expand{
+    color: var(--secondary-color);
+}
+.district_dropdown option{
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
+.state_name{
+    font-size: 3rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.name_left{
+    font-size: 2rem;
+    padding: 15px 0px 0px 35px;
+}   
+.left_data{
+    padding: 10px 0px 0px 75px;
+    font-size: 1.5rem;
+}
+.State span{
+    margin-left: 10px;
+} 
+.india_data{
+    margin-top: -100px;
+    width: 350px;
+    color: var(--primary-color);
+}
+.right_box{
+    width: 300px;
+    height: 150px;
+    background: var(--secondary-color);
+    margin-top: 50px;
+    border-radius: 10px;
+    padding-left: 30px;
+}
+.right_box :first-child{
+    font-size: 3.5rem;
+}
+.right_box :nth-child(3){
+    font-size: 1.5rem;
+    margin-left: -125px;
+    margin-top: -50px;
+    font-weight: 300;   
+}
+.right_box :nth-child(4){
+    font-size: 1.5rem;
+    margin-left: 50px;
+    font-weight: 300;   
+}
+.search ,.search_data{
+    width: 300px;
+    height: 50px;
+    border-radius: 100px;
+    background: var(--secondary-color);
+    transition: .4s;
+    font-size: 20px;
+}
+.search_data{
+    width: 250px;
+    height: 50px;
+    outline: none;
+    border: none;
+    padding-left: 20px;
+    margin-left: 23px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.end{
+    margin-top: -10px;
+}
+.left_data_v{
+    margin-left: -7px
+}
+
+@media (max-width: 1100px) {
+    body{
+        font-size: 5px;
+    }
+    .container{
+        flex-direction: column-reverse;
+    }
+    .map{
+        zoom: .6;
+        height: 700px;
+    } 
+    .india_data{
+        margin-top: 30px;
+    }
+    .State{ 
+        margin-top: 0px;
+        margin-left: -80px;
+        height: 600px;
+    }
+    .end{
+        margin-top: -80px;
+        font-size: 10px;
+    }
+}
